@@ -14,17 +14,23 @@
       <!--Pseudo Code Time: -->
       
       <!-- (# of times the user has guessed the letter correctly) -->
+      <!--In the JS files, this will be variable "numWins"-->
       <p>Wins:</p> 
       
       <!-- (# of times the user has failed to guess the letter correctly after exhausting all guesses) -->
+      <!--In the JS files, this will be variable "numLosses"-->
       <p> Losses: </p>
       
       <!-- (# of guesses left. This will update) -->
+      <!--In the JS files, this will be variable "numGuessesLeft"-->
       <p>Guesses Left:</p>
       
       <!-- (the specific letters that the user typed. Display these until the user either wins or loses.) -->
+      <!--In the JS files, this will be variable "yourGuesses"-->
+      <!--this is going to be an array-->
       <p>Your Guesses So Far:</p>
-      
+
+      <!--do we need a fifth variable here? I feel like we can get away with just 4, and have this one be yourGuesses, the most recent version-->
       <form action="/action_page.php">
         Enter Your Guess Here:<br>
         <input type="text" name="lastname">
