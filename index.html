@@ -11,33 +11,8 @@
   <body>
     
     <h2>Guess what letter I'm thinking of?</h2>
-    <!-- <p>The <strong>input type="text"</strong> defines a one-line text input field:</p> -->
-    
-    <form action="/action_page.php">
-    Wins:<br>
-    <input type="text" name="winds">
-    <br>
-    Losses:<br>
-    <input type="text" name="lastname">
-    <br><br>
-    <input type="submit">
-    </form>
-    
-    <form action="/action_page.php">
-    Guesses Left:<br>
-    <input type="text" name="Guesses Left">
-    <br>
-    Your Guesses So Far:<br>
-    <input type="text" name="lastname">
-    <br><br>
-    <input type="submit">
-    </form>
-    
-
       <!--Pseudo Code Time: -->
       
-      
-
       <!-- (# of times the user has guessed the letter correctly) -->
       <p>Wins:</p> 
       
@@ -49,9 +24,18 @@
       
       <!-- (the specific letters that the user typed. Display these until the user either wins or loses.) -->
       <p>Your Guesses So Far:</p>
+      
+      <form action="/action_page.php">
+        Enter Your Guess Here:<br>
+        <input type="text" name="lastname">
+        <br><br>
+        <input type="submit">
+        </form>
+
       <!--When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
       When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).-->
-    
+
+
     <!--This is the link to my external game.js script tag- the link may be wrong...-->
     <script src="assets/javascript/game.js"></script>
     <!-- Optional JavaScript -->
