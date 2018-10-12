@@ -8,7 +8,8 @@ var LettersGuessed=[];
 
 // this will be assigned, randomly
 // HOW??
-var ComputerChoice= "";
+var ComputerChoice= letters[Math.floor(Math.random()*letters.length)];
+console.log(ComputerChoice);
 
 // this will count down to 0, after each sucessive guess
 var NumGuessesLeft=3;
@@ -22,21 +23,7 @@ var NumLosses=0;
 // Need to make: functions to assign computerChoice, store lettersGuessed, check if guess was correct, count guessesLeft, and store wins/losses
 // Inititalize/define then call function
 
-var changeNumGuessesLeft = function() {
-    // define the amount of numGuessesLeft from html div
-    // needs to be displayed on site
-    // this targets the <p> element "Guesses Left" on index.html line 26
-    document.querySelector("#Guesses-Left:").innerHTML = numGuessesLeft;
-};
 
-var changeComputerChoice = function() {
-    // assign a random number for the guesser to guess
-    // random number generator
-    // math.random is a random number generator, between 0 and 1
-    // math.floor makes it an integer
-    // letters.length allows us to access numbers between [0,25] which is the whole alphabet
-    ComputerChoice = letters[Math.floor(Math.random()*letters.length)];
-};
 
 var changeLettersGuessed = function() {
     // post the guesses so far
@@ -48,14 +35,47 @@ var changeLettersGuessed = function() {
 // document.onkeydown a method
 document.onkeydown = function(event){
     // decrement guesses by one
-    NumGuessesLeft--;
+    document.getElementById("numGuessesLeft").textContent=NumGuessesLeft;
+    document.getElementById("numWins").textContent=NumWins;
+    document.getElementById("numLosses").textContent=NumLosses;
+
+    var userGuess=event.key;
+    console.log(userGuess);
+    if (NumGuessesLeft <= 0){
+        NumLosses++;
+        console.log("Numlosses = " + NumLosses); 
+        resetGame();    
+    }
+    else {
+            
+        if (userGuess === ComputerChoice) {
+            NumWins++;  
+            console.log("NumWins =  " + NumWins);    
+        } else {
+            NumGuessesLeft--;
+            console.log("NumGuessesLeft = " + NumGuessesLeft);
+            LettersGuessed.push(userGuess);
+            console.log("letters guessed " + LettersGuessed);
+        };
+    };
+
+};
+
+function resetGame() {
+    NumGuessesLeft=3;
+    ComputerChoice= letters[Math.floor(Math.random()*letters.length)];
+    console.log(ComputerChoice);
 }
+
 
 // Execute functions
 changeComputerChoice();
 changeNumGuessesLeft();
 
+// submit the guess to the LettersGuessed array
+LettersGuessed.push(letter);
 
+// refresh the guessesLeft, and guessedLetters
 
 
 
