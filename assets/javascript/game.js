@@ -41,8 +41,20 @@ var changeComputerChoice = function() {
 var changeLettersGuessed = function() {
     // post the guesses so far
     // document.querySelector is a predefined method 
-    document.querySelector("#Your-Guesses-So-Far:")
+    document.querySelector("#Your-Guesses-So-Far:").innerHTML = LettersGuessed.join(" , ");
+};
+
+//capture keyboard inputs 
+// document.onkeydown a method
+document.onkeydown = function(event){
+    // decrement guesses by one
+    NumGuessesLeft--;
 }
+
+// Execute functions
+changeComputerChoice();
+changeNumGuessesLeft();
+
 
 
 
