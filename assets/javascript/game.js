@@ -22,13 +22,14 @@ var numLosses=0;
 // Need to make: functions to assign computerChoice, store lettersGuessed, check if guess was correct, count guessesLeft, and store wins/losses
 // Inititalize/define then call function
 
-var numGuessesLeft = function() {
+var changeNumGuessesLeft = function() {
     // define the amount of numGuessesLeft from html div
     // needs to be displayed on site
-    document.querySelector("#guesses-left").innerHTML = numGuessesLeft;
-}
+    // this targets the <p> element "Guesses Left" on index.html line 26
+    document.querySelector("#Guesses Left").innerHTML = numGuessesLeft;
+};
 
-
+var 
 
 
 
