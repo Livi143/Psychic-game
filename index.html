@@ -15,40 +15,28 @@
       
       <!-- (# of times the user has guessed the letter correctly) -->
       <!--In the JS files, this will be variable "numWins"-->
-      <p>Wins:
-        <span id="NumWins">
-
-        </span>
-      </p> 
+      <p>Wins: <span id="Wins"></span></p> 
       
       <!-- (# of times the user has failed to guess the letter correctly after exhausting all guesses) -->
       <!--In the JS files, this will be variable "numLosses"-->
-      <p> Losses: 
-          <span id="NumLosses">
-
-            </span>
-
-      </p>
+      <p> Losses: <span id="Losses"></span></p>
       
       <!-- (# of guesses left. This will update) -->
       <!--In the JS files, this will be variable "numGuessesLeft"-->
-      <p>Guesses Left:
-          <span id="numGuessesLeft">
-
-          </span>
-      </p>
+      <p>Guesses Left: <span id="GuessesLeft"></span></p>
       
       <!-- (the specific letters that the user typed. Display these until the user either wins or loses.) -->
       <!--In the JS files, this will be variable "yourGuesses"-->
       <!--this is going to be an array-->
-      <p>Your Guesses So Far:
-          <span id=" ">
+      <p>Your Guesses So Far:<span id="GuessSoFar"></span></p>
 
-            </span>
-      </p>
-
-
-      
+      <!--do we need a fifth variable here? I feel like we can get away with just 4, and have this one be yourGuesses, the most recent version-->
+      <!-- <form action="/action_page.php">
+        Enter Your Guess Here:<br>
+        <input type="text" name="lastname">
+        <br><br>
+        <input type="submit">
+        </form> -->
 
       <!--When the player wins, increase the Wins counter and start the game over again (without refreshing the page).
       When the player loses, increase the Losses counter and restart the game without a page refresh (just like when the user wins).-->
