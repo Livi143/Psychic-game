@@ -34,7 +34,7 @@ document.onkeyup = function (event) {
         reset();
     }   else if (numGuessesLeft ===1) {
         numLosses++;
-        alert("you suck!");
+        alert("you lose!");
         reset();
 
     } else {
